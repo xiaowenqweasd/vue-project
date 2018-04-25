@@ -1,7 +1,7 @@
 <template>
 <div class="header">
     <ul>
-      <li v-for="item in headerItems" >  
+      <li v-for="item in headerItems" >
         <router-link :to="item.url">{{item.name}}<span class="icon" v-if="item.children">&#xe6a6;</span></router-link>
         <ul class="li-children">
           <li v-for="childrenItem in item.children">
@@ -18,7 +18,7 @@ export default {
   name: 'Header',
   computed: {
     headerItems () {
-	    return this.$store.state.headerItems
+	    return this.$store.state.header.headerItems
     }
   },
   methods: {
